@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What's For Dinner</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <div class="header-inner">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    <i class="bi bi-fork-knife"></i>
+                </div>
+
+                <div>
+                    <h1>What's For Dinner</h1>
+                    <p>Your daily meal inspiration</p>
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button class="icon-btn" id="bookmarkHeader">
+                    <i class="bi bi-bookmark-fill"></i>
+                </button>
+
+                <button class="icon-btn" id="historyBtn">
+                    <i class="bi bi-clock-history"></i>
+                </button>
+
+                <button class="icon-btn" id="settingsBtn">
+                    <i class="bi bi-gear-fill"></i>
+                </button>
+
+                <div class="avatar">
+                    <img src="images/avatar-2.jpg" alt="" srcset="">
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="page-wrapper">
+
+        <div class="recipe-card">
+
+
+            <!-- ================= LEFT ================= -->
+
+            <section class="recipe-image-side">
+
+                <img
+                    id="recipeImage"
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=90"
+                    alt="Recipe"
+                >
+
+
+                <!-- Rating -->
+
+                <div class="rating-pill">
+
+                    <i class="bi bi-star-fill"></i>
+
+                    <strong id="rating">
+                        4.8
+                    </strong>
+
+                    <span id="reviews">
+                        (234 reviews)
+                    </span>
+
+                </div>
+
+
+                <!-- Time Card -->
+
+                <div class="time-card">
+
+                    <div class="time-item">
+
+                        <i class="bi bi-clock-fill orange"></i>
+
+                        <span>
+                            Prep Time
+                        </span>
+
+                        <strong id="prepTime">
+                            30 min
+                        </strong>
+
+                    </div>
+
+
+                    <div class="time-item">
+
+                        <i class="bi bi-fire red"></i>
+
+                        <span>
+                            Cook Time
+                        </span>
+
+                        <strong id="cookTime">
+                            60 min
+                        </strong>
+
+                    </div>
+
+
+                    <div class="time-item">
+
+                        <i class="bi bi-people-fill blue"></i>
+
+                        <span>
+                            Servings
+                        </span>
+
+                        <strong id="servings">
+                            4 people
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= RIGHT ================= -->
+
+            <section class="recipe-content">
+
+
+                <!-- Title -->
+
+                <div class="content-top">
+
+                    <div>
+
+                        <div class="badges">
+
+                            <span
+                                class="badge difficulty"
+                                id="difficulty"
+                            >
+                                Intermediate
+                            </span>
+
+                            <span
+                                class="badge category"
+                                id="category"
+                            >
+                                Mediterranean
+                            </span>
+
+                        </div>
+
+
+                        <h2 id="recipeTitle">
+                            Greek Moussaka
+                        </h2>
+
+
+                        <p
+                            class="subtitle"
+                            id="recipeDescription"
+                        >
+                            Traditional layered eggplant casserole with lamb
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Buttons -->
+
+                    <div class="recipe-actions">
+
+                        <button
+                            class="action-btn"
+                            id="saveBtn"
+                        >
+                            <i class="bi bi-bookmark-fill"></i>
+                        </button>
+
+
+                        <button
+                            class="action-btn"
+                            id="shareBtn"
+                        >
+                            <i class="bi bi-share-fill"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Warning -->
+
+                <div
+                    class="warning-box"
+                    id="warningBox"
+                >
+
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+
+                    <div>
+
+                        <strong>
+                            Extended Preparation Time
+                        </strong>
+
+                        <p>
+                            This recipe requires more than 45 minutes to prepare.
+                            Plan accordingly!
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= TABS ================= -->
+
+                <div class="recipe-tabs">
+
+                    <button
+                        class="tab-btn active"
+                        data-tab="ingredients"
+                    >
+
+                        <i class="bi bi-list-check"></i>
+
+                        Ingredients
+
+                    </button>
+
+
+                    <button
+                        class="tab-btn"
+                        data-tab="instructions"
+                    >
+
+                        <i class="bi bi-book-half"></i>
+
+                        Instructions
+
+                    </button>
+
+
+                    <button
+                        class="tab-btn"
+                        data-tab="nutrition"
+                    >
+
+                        <i class="bi bi-pie-chart-fill"></i>
+
+                        Nutrition
+
+                    </button>
+
+
+                    <button
+                        class="tab-btn"
+                        data-tab="tips"
+                    >
+
+                        <i class="bi bi-lightbulb-fill"></i>
+
+                        Chef's Tips
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Dynamic Content -->
+
+                <div
+                    class="tab-panel"
+                    id="tabPanel"
+                >
+                </div>
+
+
+
+                <!-- Button -->
+
+                <div class="bottom-area">
+
+                    <button
+                        class="try-btn"
+                        id="nextRecipe"
+                    >
+
+                        <i class="bi bi-arrow-repeat"></i>
+
+                        Try Another Recipe
+
+                    </button>
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-4">
+
+        <div
+            id="liveToast"
+            class="toast border-0 shadow"
+        >
+
+            <div class="toast-body">
+
+                <i class="bi bi-check-circle-fill me-2"></i>
+
+                <span id="toastMessage">
+                    Recipe saved!
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="js/bootstrap.bundle.min.js"
+    ></script>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
